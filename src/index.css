@@ -6,3 +6,11 @@ body{
     background-color: black;
     color: white;
 }
+
+.active{
+    color: rgb(227, 75, 113);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

@@ -5,7 +5,8 @@ import AppLayout from "./ui/AppLayout";
 import Home from "./ui/Home";
 import About from "./pages/about/About"
 import Skills from "./pages/skills/Skills"
-import Contact from "./pages/about/About"
+import Contact from "./pages/contact/Contact"
+import Story from "./pages/story/Story";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path : '/story/:id',
+    element : <Story/>
+  }
 ]);
 
 const App = () => {
