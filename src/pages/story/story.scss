@@ -111,29 +111,29 @@ $card-size: 23rem;
 }
 
 .btn {
-  border: 1px solid #21ebff;
-  color: #21ebff;
+  border: 1px solid rgb(236, 72, 153);
+  color: rgb(236, 72, 153);
   box-shadow:
-    0 0 5px #21ebff,
-    0 0 5px #21ebff inset;
+    0 0 5px rgb(236, 72, 153),
+    0 0 5px rgb(236, 72, 153) inset;
   transition: all 0.3s ease;
 }
 .btn:hover {
-  background-color: rgba(18, 97, 104, 0.9);
-  color: #21ebff;
+  background-color: rgb(138, 0, 69);
+  color: white;
 }
 
 .btn2 {
-  background-color: rgb(36, 164, 175);
+  background-color: rgb(138, 0, 69);
   color: white;
   transition: all 0.3s ease;
 }
 .btn2:hover {
-  // border: 1px solid #21ebff;
-  color: #21ebff;
+  // border: 1px solid rgb(236, 72, 153);
+  color: rgb(236, 72, 153);
   box-shadow:
-    0 0 5px #21ebff,
-    0 0 5px #21ebff inset;
+    0 0 5px rgb(236, 72, 153),
+    0 0 5px rgb(236, 72, 153) inset;
   background: transparent;
 
 }
