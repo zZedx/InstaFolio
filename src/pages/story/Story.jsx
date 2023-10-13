@@ -1,31 +1,98 @@
-import React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
-
-import {
-  TiChevronLeftOutline,
-  TiChevronRightOutline,
-} from "https://cdn.skypack.dev/react-icons/ti";
 import { Link, useNavigate, useParams } from "react-router-dom";
+
+// import {
+//   TiChevronLeftOutline,
+//   TiChevronRightOutline,
+// } from "https://cdn.skypack.dev/react-icons/ti";
 
 import "./story.scss";
 import { recent } from "../../utils/recentProjecs";
 
-const CARDS = recent.length;
 const MAX_VISIBILITY = 3;
 
-const Card = ({ title, content, imgs }) => (
-  <div
-    className="card border-4 border-pink-600 bg-cover bg-center"
-    style={{ backgroundImage: `url(${imgs[0]})` }}
-  >
-    <h2 className="z-10">{title}</h2>
-    {/* <img className="absolute top-0 left-0 h-full object-cover object-center z-0 p-1 rounded-2xl" src={imgs[0]} alt="" /> */}
-    <p className="z-10">{content}</p>
-  </div>
-);
+const Card = ({ title, content, imgs, tools }) => {
+  const { id } = useParams();
+  useEffect(() => {
+    setActive(false);
+  }, [id]);
+  const [active, setActive] = useState(false);
+  return (
+    <div
+      className={`card flex flex-col justify-between items-center overflow-hidden ${
+        active ? "cursor-pointer" : ""
+      }`}
+      style={{
+        boxShadow: active ? "0 0 40px purple, 0 0 150px purple" : "none",
+      }}
+      onClick={() => setActive(false)}
+    >
+      <span
+        className="z-10 font-bold text-6xl tracking-wider text-transparent uppercase"
+        style={{
+          WebkitTextStroke: "2px white",
+          textShadow: "0 0 40px purple, 0 0 0px purple , 0 0 150px purple",
+        }}
+      >
+        {title}
+      </span>
+      <img
+        className={` transition-all absolute top-0 left-0 h-full object-cover object-center z-0 p-1 rounded-2xl ${
+          active ? "blur-lg" : ""
+        }`}
+        src={imgs[0]}
+        alt=""
+      />
+      <div
+        className={`transition-all z-10 flex items-center flex-col gap-6 overflow-hidden bg-purple-50/10 w-full py-10 `}
+      >
+        <ul className="flex px-4 gap-3 ">
+          {tools.map((tool, i) => (
+            <li key={i}>
+              <Tool>{tool}</Tool>
+            </li>
+          ))}
+        </ul>
 
-const Carousel = ({ children }) => {
+        {!active && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setActive(true);
+            }}
+            className="  px-3 py-2 text-purple-400 cursor-pointer text-xl underline hover:text-purple-200 w-full uppercase font-semibold"
+          >
+            more Details
+          </button>
+        )}
+        <div
+          className={`transition-all duration-500 ease-out translate-y-96 absolute w-3/4 text-center space-y-3 ${
+            active ? "translate-y-0 relative" : ""
+          }`}
+        >
+          <p>{content}</p>
+          <a
+            className="border-2 border-purple-400/40 font-semibold hover:bg-pink-200 hover:text-black px-2 py-1 text-sm inline-block w-24 text-center"
+            href=""
+          >
+            CODE
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+function Tool({ children }) {
+  return (
+    <span className="bg-gradient-to-tr to-purple-400 border-2 border-red-700 from-pink-500 px-2 py-0.5 inline-block rounded uppercase font-semibold text-xs md:text-sm min-w-[80px] text-center">
+      {children}
+    </span>
+  );
+}
+
+const Carousel = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [active, setActive] = useState(Number(id));
@@ -64,11 +131,12 @@ const Carousel = ({ children }) => {
               setActive(Number(id) - 1);
             }}
           >
-            <TiChevronLeftOutline />
+            <i className="fa-solid fa-chevron-left"></i>
           </button>
         )}
-        {React.Children.map(children, (child, i) => (
+        {recent.map((project, i) => (
           <div
+            key={i}
             className="card-container"
             style={{
               "--active": i === active ? 1 : 0,
@@ -80,7 +148,12 @@ const Carousel = ({ children }) => {
               display: Math.abs(active - i) > MAX_VISIBILITY ? "none" : "block",
             }}
           >
-            {child}
+            <Card
+              imgs={project.imgs}
+              title={project.name}
+              content={project.description}
+              tools={project.tools}
+            />
           </div>
         ))}
         {active < count - 1 && (
@@ -91,7 +164,7 @@ const Carousel = ({ children }) => {
               setActive(Number(id) + 1);
             }}
           >
-            <TiChevronRightOutline />
+            <i className="fa-solid fa-chevron-right"></i>
           </button>
         )}
       </div>
@@ -100,21 +173,9 @@ const Carousel = ({ children }) => {
 };
 
 export default function Story() {
-  const { id } = useParams();
-  const project = recent[id];
-
   return (
     <div className="app">
-      <Carousel>
-        {[...new Array(CARDS)].map((i) => (
-          <Card
-            key={i}
-            imgs={project.imgs}
-            title={project.name}
-            content={project.description}
-          />
-        ))}
-      </Carousel>
+      <Carousel></Carousel>
     </div>
   );
 }
