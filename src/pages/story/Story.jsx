@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
+
 import {
   TiChevronLeftOutline,
   TiChevronRightOutline,
@@ -12,8 +14,11 @@ import { recent } from "../../utils/recentProjecs";
 const CARDS = recent.length;
 const MAX_VISIBILITY = 3;
 
-const Card = ({ title, content , imgs}) => (
-  <div className="card border-4 border-pink-600 bg-cover bg-center" style={{backgroundImage : `url(${imgs[0]})`}}>
+const Card = ({ title, content, imgs }) => (
+  <div
+    className="card border-4 border-pink-600 bg-cover bg-center"
+    style={{ backgroundImage: `url(${imgs[0]})` }}
+  >
     <h2 className="z-10">{title}</h2>
     {/* <img className="absolute top-0 left-0 h-full object-cover object-center z-0 p-1 rounded-2xl" src={imgs[0]} alt="" /> */}
     <p className="z-10">{content}</p>
@@ -25,6 +30,17 @@ const Carousel = ({ children }) => {
   const navigate = useNavigate();
   const [active, setActive] = useState(Number(id));
   const count = recent.length;
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (active === count - 1) return;
+      setActive(active + 1);
+    },
+    onSwipedRight: () => {
+      if (active === 0) return;
+      setActive(active - 1);
+    },
+  });
 
   return (
     <div className="h-screen w-screen flex justify-center items-center overflow-hidden">
@@ -39,13 +55,13 @@ const Carousel = ({ children }) => {
         InstaFolio
       </Link>
 
-      <div className="carousel h-3/4 lg:h-5/6 xl:w-1/4">
+      <div className="carousel h-3/4 lg:h-5/6 xl:w-1/4" {...handlers}>
         {active > 0 && (
           <button
             className="nav left"
             onClick={() => {
               navigate(`/story/${Number(id) - 1}`);
-              setActive(Number(id)-1);
+              setActive(Number(id) - 1);
             }}
           >
             <TiChevronLeftOutline />
@@ -72,7 +88,7 @@ const Carousel = ({ children }) => {
             className="nav right"
             onClick={() => {
               navigate(`/story/${Number(id) + 1}`);
-              setActive(Number(id)+1);
+              setActive(Number(id) + 1);
             }}
           >
             <TiChevronRightOutline />
@@ -91,7 +107,12 @@ export default function Story() {
     <div className="app">
       <Carousel>
         {[...new Array(CARDS)].map((i) => (
-          <Card key={i} imgs={project.imgs} title={project.name} content={project.description} />
+          <Card
+            key={i}
+            imgs={project.imgs}
+            title={project.name}
+            content={project.description}
+          />
         ))}
       </Carousel>
     </div>
