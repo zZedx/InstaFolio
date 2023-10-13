@@ -3,28 +3,28 @@ import Project from "./Project";
 const projects = [
   {
     name: "Spotify",
-    img: "",
+    img: "images/spotify.png",
     description: "awdawdawdawdawd",
     tools: ["html", "css", "Javascript"],
     date: "335",
   },
   {
     name: "Spotify",
-    img: "",
+    img: "images/yelpCamp.png",
     description: "efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad",
     tools: ["html", "css", "Javascript"],
     date: "3453",
   },
   {
     name: "Spotify",
-    img: "",
+    img: "images/spotify.png",
     description: "efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad",
     tools: ["html", "css", "Javascript"],
     date: "3453",
   },
   {
     name: "Spotify",
-    img: "",
+    img: "images/yelpCamp.png",
     description: "efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad",
     tools: ["html", "css", "Javascript"],
     date: "3453",

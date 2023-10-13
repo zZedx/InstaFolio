@@ -9,7 +9,7 @@ const Project = ({ project }) => {
         <span className="w-1 h-1 rounded-full bg-gray-400"></span>
         <span className="text-sm text-gray-400">{date}</span>
       </nav>
-      <img className="w-full h-56 rounded-md overflow-hidden" src={img} alt="" />
+      <img className="w-full rounded-md overflow-hidden" src={img} alt="" />
       <main>
         <ul className="flex my-4 px-4 gap-3">
           {tools.map((tool, i) => (
@@ -22,13 +22,13 @@ const Project = ({ project }) => {
           colapsedNumWords={5}
           buttonInline={false}
           buttonColor="pink"
-          className="px-4 mb-6"
+          className="px-4 mb-6 text-sm md:text-base "
         >
           {description}
         </TextExpander>
         <div className="px-4 mb-4 space-x-6">
-        <a className="border px-2 py-1 text-sm inline-block w-16 text-center" href="">Code</a>
-        <a className="border px-2 py-1 text-sm inline-block w-16 text-center" href="">Live</a>
+        <a className="border border-white/40 px-2 py-1 text-sm inline-block w-24 text-center" href="">Code</a>
+        <a className="border border-white/40 px-2 py-1 text-sm inline-block w-24 text-center" href="">Live</a>
         </div>
       </main>
     </div>
@@ -37,7 +37,7 @@ const Project = ({ project }) => {
 
 function Tool({ children }) {
   return (
-    <span className="bg-white/40 px-2 py-0.5 inline-block rounded-lg uppercase font-semibold text-sm">
+    <span className="bg-white/40 px-2 py-0.5 inline-block rounded-lg uppercase font-semibold text-xs md:text-sm">
       {children}
     </span>
   );

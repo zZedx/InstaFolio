@@ -9,6 +9,7 @@ const AppLayout = () => {
       </div>
       <div className="flex-auto overflow-auto lg:col-span-4 xl:col-span-5">
         <Outlet />
+        <footer className="border-t border-white/40 h-28 flex items-center justify-center text-white/60 mt-12">@InstaFolio</footer>
       </div>
     </div>
   );

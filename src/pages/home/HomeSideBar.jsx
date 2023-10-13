@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const HomeSideBar = () => {
   return (
-    <div className="lg:mt-10 space-y-6 lg:px-6 lg:pt-6 lg:pb-12 border bg-white/10">
+    <div className="lg:mt-10 space-y-6 lg:px-6 lg:pt-6 lg:pb-12 border border-white/40 bg-white/10">
       <Link
         to={"/about"}
         className="flex gap-4 items-center hover:bg-white/10 py-3 rounded-md "
       >
-        <img src="" className="bg-red-50 w-12 h-12 rounded-full" alt="" />
+        <img src="images/pfp.jpg" className="bg-red-50 w-14 h-14 rounded-full object-cover" alt="" />
         <div>
           <h1 className="font-semibold tracking-wider">Kartik Ajmera</h1>
           <span>Full Stack Developer</span>
