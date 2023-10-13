@@ -13,19 +13,17 @@ const CARDS = recent.length;
 const MAX_VISIBILITY = 3;
 
 const Card = ({ title, content , imgs}) => (
-  <div className="card">
-    <h2>{title}</h2>
-    <img src={imgs[0]} alt="" />
-    <p>{content}</p>
+  <div className="card border-4 border-pink-600 bg-cover bg-center" style={{backgroundImage : `url(${imgs[0]})`}}>
+    <h2 className="z-10">{title}</h2>
+    {/* <img className="absolute top-0 left-0 h-full object-cover object-center z-0 p-1 rounded-2xl" src={imgs[0]} alt="" /> */}
+    <p className="z-10">{content}</p>
   </div>
 );
 
 const Carousel = ({ children }) => {
   const { id } = useParams();
-  console.log(id)
   const navigate = useNavigate();
   const [active, setActive] = useState(Number(id));
-  console.log(active)
   const count = recent.length;
 
   return (
@@ -41,7 +39,7 @@ const Carousel = ({ children }) => {
         InstaFolio
       </Link>
 
-      <div className="carousel h-3/4">
+      <div className="carousel h-3/4 lg:h-5/6 xl:w-1/4">
         {active > 0 && (
           <button
             className="nav left"
