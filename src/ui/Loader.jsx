@@ -1,32 +1,40 @@
-// import { useEffect, useState } from "react";
-// import { Outlet, useLocation, useNavigation } from "react-router-dom";
-// import TopBarProgress from "react-topbar-progress-indicator"
+import { useEffect, useRef } from "react";
+// import { useNavigation } from "react-router-dom";
+import LoadingBar from "react-top-loading-bar";
 
-// const Loader = () => {
-//   const [progress, setProgress] = useState(false);
-//   const [prevLoc, setPrevLoc] = useState("");
-//   const location = useLocation();
-//   const [temp , setTemp] = useState(false)
+const loaderStyle = {
+//   position: "absolute",
+//   top: "3.4rem", //height of header
+  backgroundColor: "rgb(227, 75, 113)",
+};
 
-//   console.log(location.pathname)
+const Loader = ({isLoading , show}) => {
+//   const navigation = useNavigation();
+//   const isLoading = navigation.state !== "idle";
+  const ref = useRef(null);
+  console.log(isLoading)
+  console.log(show)
 
-//   useEffect(() => {
-//     setPrevLoc(location.pathname);
-//     setProgress(true);
-//     if (location.pathname === prevLoc) {
-//       setPrevLoc("");
-//     }
-//   }, [location.pathname]);
+  useEffect(() => {
+    const loadingBarRef = ref.current;
+    show ? isLoading ? loadingBarRef.continuousStart() : loadingBarRef.complete() : '';
+    // isLoading ? setProgress(50) : setProgress(100);
+  }, [isLoading , show]);
 
-//   useEffect(() => {
-//     setProgress(false);
+  //   return <div className={`${isLoading ? '' : "hidden"} absolute inset-0 flex items-center justify-center bg-slate-200/20 backdrop-blur-sm transition-all z-10`}>
+  //   <div className="loader"></div>
+  // </div>
 
-//   }, [prevLoc]);
+  return (
+    <LoadingBar
+      ref={ref}
+      shadow={false}
+      style={loaderStyle}
+      transitionTime={100}
+    //   waitingTime={}
+      height={2}
+    />
+  );
+};
 
-//   return <>
-//   {progress && <TopBarProgress color={"pink"}/>}
-//   <Outlet />;
-//   </>
-// };
-
-// export default Loader;
+export default Loader;

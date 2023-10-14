@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* body{
+    background-color: rgb(255, 248, 252);
+    color: black;
+} */
 body{
     background-color: black;
     color: white;
 }
-
 .active{
     color: #e34b71;
 }
@@ -14,3 +17,7 @@ body{
 ::-webkit-scrollbar {
     display: none;
 }
+
+/* .border{
+    border: 2px solid black;
+} */

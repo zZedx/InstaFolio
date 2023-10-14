@@ -10,7 +10,7 @@ const HomeSideBar = () => {
         <img src="images/pfp.jpg" className="bg-red-50 w-14 h-14 rounded-full object-cover" alt="" />
         <div>
           <h1 className="font-semibold tracking-wider">Kartik Ajmera</h1>
-          <span>Full Stack Developer</span>
+          <span className="text-sm 2xl:text-base">Full Stack Developer</span>
         </div>
       </Link>
       <div className="flex flex-col gap-2">

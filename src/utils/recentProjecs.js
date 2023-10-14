@@ -1,6 +1,6 @@
 export const recent = [
     {
-      name: "Spotify",
+      name: "Food Order",
       imgs: ["../images/yelpCamp.png"],
       description: "sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada sadawdawdada",
       tools: ["html" , "css" , "js"],
