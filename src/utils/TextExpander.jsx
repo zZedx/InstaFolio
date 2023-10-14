@@ -8,7 +8,8 @@ export default function TextExpander({
   buttonColor="#ff6622",
   expanded = false,
   className = '',
-  buttonInline = true
+  buttonInline = true,
+  title
 }) {
   const [isExpanded, setIsExpanded] = useState(expanded);
 
@@ -32,7 +33,7 @@ export default function TextExpander({
   return (
     <div style={className === 'box' ? boxStyle : null} className={className}>
       <p style={{display : `${buttonInline ? 'inline' : ''}` , margin:0}}>
-        {isExpanded ? expandedText : `${slicedText}... `}
+        <span className="font-bold underline mr-2">{title}</span> {isExpanded ? expandedText : `${slicedText}... `}
       </p>
       <span style={buttonStyle} onClick={() => setIsExpanded((e) => !e)}>
         {isExpanded ? collapseButtonText : expandButtonText}

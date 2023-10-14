@@ -15,21 +15,21 @@ const HomeSideBar = () => {
       </Link>
       <div className="flex flex-col gap-2">
         <a
-          className="text-xl hover:text-red-300 flex items-center"
-          href="/github/zZed"
+          className="text-xl hover:text-pink-500 flex items-center"
+          href="https://github.com/zZedx"
         >
           <i className="fa-brands fa-github"></i>
           <span className="ml-2 text-base">Github</span>{" "}
         </a>
         <a
-          className="text-xl hover:text-red-300 flex items-center"
-          href="/github/zZed"
+          className="text-xl hover:text-pink-500 flex items-center"
+          href="https://www.linkedin.com/in/kartik-ajmera-54919628a/"
         >
           <i className="fa-brands fa-linkedin"></i>
           <span className="ml-2 text-base">LinkedIn</span>{" "}
         </a>
       </div>
-      <button className="bg-gradient-to-tl duration-300 from-red-300 to-pink-600 hover:gradient-to-br hover:from-pink-600 hover:to-red-300 transition-colors hover:text-red-50 text-black font-bold w-full py-2 rounded-lg">
+      <button className="bg-gradient-to-tl duration-300 from-red-500 to-pink-500 hover:gradient-to-br hover:from-pink-500 hover:to-red-500 transition-colors hover:text-red-100 text-red-100 font-bold w-full py-2 rounded">
         DOWNLOAD RESUME
       </button>
       <div>

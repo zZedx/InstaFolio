@@ -23,12 +23,13 @@ const Project = ({ project }) => {
           buttonInline={false}
           buttonColor="pink"
           className="px-4 mb-6 text-sm md:text-base "
-        >
+        title = {name}
+          >
           {description}
         </TextExpander>
         <div className="px-4 mb-4 space-x-6">
-        <a className="border border-white/40 px-2 py-1 text-sm inline-block w-24 text-center" href="">Code</a>
-        <a className="border border-white/40 px-2 py-1 text-sm inline-block w-24 text-center" href="">Live</a>
+        <a className="border border-white/40 px-2 py-1 text-sm inline-block w-24 text-center font-semibold tracking-widest" href="">CODE</a>
+        <a className="border border-white/40 px-2 py-1 text-sm inline-block w-24 text-center font-semibold tracking-widest" href="">LIVE</a>
         </div>
       </main>
     </div>
@@ -37,7 +38,7 @@ const Project = ({ project }) => {
 
 function Tool({ children }) {
   return (
-    <span className="bg-white/40 px-2 py-0.5 inline-block rounded-lg uppercase font-semibold text-xs md:text-sm">
+    <span className="bg-pink-500/80 px-2 py-0.5 inline-block rounded uppercase font-semibold text-xs md:text-sm">
       {children}
     </span>
   );

@@ -25,6 +25,7 @@ $card-size: 23rem;
   height: $card-size;
   perspective: 500px;
   transform-style: preserve-3d;
+  
 }
 
 .card-container {
@@ -38,6 +39,18 @@ $card-size: 23rem;
   filter: blur(calc(var(--abs-offset) * 1rem));
   transition: all 0.3s ease-out;
 }
+
+// .card-container {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   transform: 
+//     scale(calc(1 + var(--abs-offset) * -0.6))
+//     translateZ(calc(var(--abs-offset) * -30rem))
+//     translateX(calc(var(--direction) * -150%));
+//   filter: blur(calc(var(--abs-offset) * 1.4rem));
+//   transition: all 0.3s ease-out;
+// }
 
 .card {
   width: 100%;
