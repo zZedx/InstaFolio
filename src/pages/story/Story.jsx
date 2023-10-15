@@ -12,8 +12,7 @@ import { recent } from "../../utils/recentProjecs";
 
 const MAX_VISIBILITY = 3;
 
-const Card = ({ project }) => {
-  const { title, content, imgs, tools, link } = project;
+const Card = ({ title, content, imgs, tools , link }) => {
   const { id } = useParams();
   useEffect(() => {
     setActive(false);
@@ -25,34 +24,24 @@ const Card = ({ project }) => {
         active ? "cursor-pointer backdrop-blur-lg" : ""
       }`}
       style={{
-        boxShadow: active
-          ? "0 0 40px hsl(327, 87%, 14%), 0 0 150px hsl(327, 87%, 14%)"
-          : "none",
+        boxShadow: active ? "0 0 40px hsl(327, 87%, 14%), 0 0 150px hsl(327, 87%, 14%)" : "none",
         // backgroundImage: `url(${imgs[0]})`,
       }}
       onClick={() => setActive(false)}
     >
-      <img
-        className={`p-1 rounded-xl absolute top-0 left-0 object-cover h-full ${
-          active ? "blur" : ""
-        }`}
-        src={imgs[0]}
-        alt=""
-      />
+      <img className={`p-1 rounded-xl absolute top-0 left-0 object-cover h-full ${active ? "blur" : ''}`} src={imgs[0]} alt="" />
       <div
-        className={`p-6 w-full transition-all duration-500 ease-in-out space-y-4 bg-black ${
+        className={`p-6 w-full transition-all duration-500 ease-in-out space-y-4 bg-black rounded-md ${
           active ? "translate-y-0" : "2xl:translate-y-[78%] translate-y-[77%]"
         }`}
-        style={
-          {
-            // background:
-            //   "linear-gradient(180deg, hsl(327, 32%, 1% , 0.3), hsl(327, 87%, 14%))",
-          }
-        }
+        style={{
+          // background:
+          //   "linear-gradient(180deg, hsl(327, 32%, 1% , 0.3), hsl(327, 87%, 14%))",
+        }}
       >
         <div className="flex items-center justify-between mb-6 ">
           <h1
-            className={`z-10 font-bold text-xl 2xl:text-2xl relative tracking-wider text-transparent uppercase after:h-1 after:w-[160%] after:bg-gradient-to-r after:from-pink-500 after:to-pink-50 after:absolute after:bottom-[-5px] after:left-0 after:origin-left after:transition-all after:duration-500 ${
+            className={`z-10 font-bold text-xl 2xl:text-2xl relative tracking-wider text-transparent uppercase after:h-1 after:w-[140%] after:bg-gradient-to-r after:from-pink-500 after:to-pink-50 after:absolute after:bottom-[-5px] after:left-0 after:origin-left after:transition-all after:duration-500 ${
               active ? "after:scale-100" : "after:scale-0"
             }`}
             style={{
@@ -71,8 +60,7 @@ const Card = ({ project }) => {
                 }}
                 className={`custom-btn btn2 text-sm py-2 px-4 rounded-sm flex gap-3 items-center transition-all`}
               >
-                <i className="fa-brands fa-github text-lg"></i>{" "}
-                <span>CODE</span>
+                <i className="fa-brands fa-github text-lg"></i> <span>CODE</span>
               </button>
             </a>
           ) : (
@@ -167,7 +155,13 @@ const Carousel = () => {
               display: Math.abs(active - i) > MAX_VISIBILITY ? "none" : "block",
             }}
           >
-            <Card project={project} />
+            <Card
+              imgs={project.imgs}
+              title={project.name}
+              content={project.description}
+              tools={project.tools}
+              link = {project.link}
+            />
           </div>
         ))}
         {active < count - 1 && (

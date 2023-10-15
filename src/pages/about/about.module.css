@@ -4,7 +4,7 @@
     animation: image__animate 5s ease-in-out infinite 1s; 
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     min-width: 18rem;
-    min-height: 18rem;
+    min-height: 20rem;
     /* order: 1; */
 }
 
