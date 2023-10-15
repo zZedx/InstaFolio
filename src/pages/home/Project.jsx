@@ -5,7 +5,7 @@ const Project = ({ project }) => {
   return (
     <div className="border border-white/20 rounded-md">
       <nav className="flex gap-3 px-4 py-3 items-center">
-        <span className="text-sm font-medium">{name}</span>
+        <span className="lg:text-lg font-medium">{name}</span>
         <span className="w-1 h-1 rounded-full bg-gray-400"></span>
         <span className="text-sm text-gray-400">{date}</span>
       </nav>

@@ -117,14 +117,14 @@ const Carousel = () => {
   });
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center overflow-hidden bg-gray-900">
+    <div className="h-screen w-screen flex justify-center items-center overflow-hidden bg-[#24231f] select-none">
       <Link to={"/"}>
-        <i className="fa-solid fa-xmark absolute top-8 right-8 lg:top-10 lg:right-16 text-3xl hover:text-pink-300"></i>
+        <i className="fa-solid fa-xmark absolute top-8 right-8 lg:top-10 lg:right-16 text-3xl hover:text-pink-500"></i>
       </Link>
 
       <Link
         to={"/"}
-        className="absolute top-8 left-8 lg:top-10 lg:left-16 text-3xl hover:text-pink-300 font-title"
+        className="absolute top-8 left-8 lg:top-10 lg:left-16 text-3xl hover:text-pink-500 font-title"
       >
         InstaFolio
       </Link>

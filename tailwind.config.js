@@ -5,6 +5,9 @@ export default {
     extend: {
       fontFamily: {
         title: ['Lobster Two', 'sans-serif'],
+        head : ['Gabarito', 'sans-serif'],
+        head2 :['Pixelify Sans', 'sans-serif'],
+        head3 : ['Diphylleia'],
       },
     },
   },

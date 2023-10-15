@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const HomeSideBar = () => {
   return (
-    <div className="lg:mt-10 space-y-6 lg:px-6 lg:pt-6 lg:pb-12 border border-white/40 bg-white/10">
+    <div className="lg:mt-10 space-y-6 lg:px-6 lg:pt-6 lg:pb-12 border border-white/40 bg-white/10 rounded-md" style={{boxShadow : " 0 0 40px hsl(327, 87%, 14%), 0 0 150px hsl(327, 87%, 14%)"}}>
       <Link
         to={"/about"}
-        className="flex gap-4 items-center hover:bg-white/10 py-3 rounded-md "
+        className="flex gap-4 items-center hover:bg-white/10 py-3 rounded-md -ml-3 -mr-3 px-3"
       >
         <img src="images/pfp.jpg" className="bg-red-50 w-14 h-14 rounded-full object-cover" alt="" />
         <div>
@@ -13,7 +13,7 @@ const HomeSideBar = () => {
           <span className="text-sm 2xl:text-base">Full Stack Developer</span>
         </div>
       </Link>
-      <div className="flex flex-col gap-2">
+      <div className="flex justify-between">
         <a
           className="text-xl hover:text-pink-500 flex items-center"
           href="https://github.com/zZedx"
