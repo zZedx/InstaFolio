@@ -7,6 +7,8 @@ const projects = [
     description: "awdawdawdawdawd",
     tools: ["html", "css", "Javascript"],
     date: "335",
+    code : '',
+    live : ''
   },
   {
     name: "Spotify",
@@ -14,6 +16,8 @@ const projects = [
     description: "efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad",
     tools: ["html", "css", "Javascript"],
     date: "3453",
+    code : '',
+    live : ''
   },
   {
     name: "Spotify",
@@ -21,6 +25,8 @@ const projects = [
     description: "efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad",
     tools: ["html", "css", "Javascript"],
     date: "3453",
+    code : '',
+    live : ''
   },
   {
     name: "Spotify",
@@ -28,6 +34,8 @@ const projects = [
     description: "efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad efadawdadwadad",
     tools: ["html", "css", "Javascript"],
     date: "3453",
+    code : '',
+    live : ''
   },
 ];
 

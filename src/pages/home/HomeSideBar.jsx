@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const HomeSideBar = () => {
   return (
-    <div className="lg:mt-10 space-y-6 lg:px-6 lg:pt-6 lg:pb-12 border border-white/40 bg-white/10 rounded-md" style={{boxShadow : " 0 0 40px hsl(327, 87%, 14%), 0 0 150px hsl(327, 87%, 14%)"}}>
+    <div className="lg:mt-10 space-y-6 lg:px-6 lg:pt-6 lg:pb-12 border border-white/10 bg-white/10 rounded-md" style={{boxShadow: "rgba(255, 255, 255, 0.4) 2px 2px 4px 4px"}}>
       <Link
         to={"/about"}
         className="flex gap-4 items-center hover:bg-white/10 py-3 rounded-md -ml-3 -mr-3 px-3"

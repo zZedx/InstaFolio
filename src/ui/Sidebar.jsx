@@ -16,13 +16,13 @@ const Sidebar = () => {
           <i className="fa-solid fa-house text-xl"></i>
           <span className="hidden sm:block tracking-widest font-medium ">HOME</span>
         </NavLink>
-        <NavLink
-          to={"/skills"}
-          className="flex gap-2 lg:gap-4 hover:bg-white/10 px-4 lg:py-3 rounded-lg items-center"
+        <p
+          // to={""}
+          className="flex gap-2 lg:gap-4 hover:bg-white/10 px-4 lg:py-3 rounded-lg items-center text-white/40 cursor-not-allowed"
         >
           <i className="fas fa-history text-xl"></i>
           <span className="hidden sm:block tracking-widest font-medium">EXPERIENCE</span>
-        </NavLink>
+        </p>
         <NavLink
           to={"/contact"}
           className="flex gap-2 lg:gap-4 hover:bg-white/10 px-4 lg:py-3 rounded-lg items-center"

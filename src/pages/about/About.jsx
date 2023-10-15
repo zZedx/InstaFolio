@@ -97,7 +97,7 @@ const About = () => {
             <span className="text-right text-lg">Web Developer</span>
           </div>
           <p className="mt-4 text-sm md:text-base xl:text-lg 2xl:text-lg text-pink-100">
-            I'm an aspiring full-stack web developer from India. My journey into
+            An aspiring full-stack web developer from India. My journey into
             the world of web development began with a simple curiosity that
             quickly transformed into a deep passion. I was captivated when I saw
             my first projects come to life through HTML and CSS, and that

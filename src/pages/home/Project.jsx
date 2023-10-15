@@ -1,9 +1,9 @@
 import TextExpander from "../../utils/textExpander";
 
 const Project = ({ project }) => {
-  const { name, date, img, tools, description } = project;
+  const { name, date, img, tools, description , code , live} = project;
   return (
-    <div className="border border-white/20 rounded-md">
+    <div className="border border-white/20 rounded-md bg-white/10">
       <nav className="flex gap-3 px-4 py-3 items-center">
         <span className="lg:text-lg font-medium">{name}</span>
         <span className="w-1 h-1 rounded-full bg-gray-400"></span>
@@ -28,8 +28,8 @@ const Project = ({ project }) => {
           {description}
         </TextExpander>
         <div className="px-4 mb-4 space-x-6">
-        <a className="border border-white/40 px-2 py-1 text-sm inline-block w-24 text-center font-semibold tracking-widest" href="">CODE</a>
-        <a className="border border-white/40 px-2 py-1 text-sm inline-block w-24 text-center font-semibold tracking-widest" href="">LIVE</a>
+        <a className="border space-x-3 border-white/40 px-2 py-1 text-sm inline-block w-24 text-center font-semibold tracking-widest" href={code}><i className="fa-brands fa-github"></i><span>CODE</span> </a>
+        <a className="border space-x-3 border-white/40 px-2 py-1 text-sm inline-block w-24 text-center font-semibold tracking-widest" href={live}><i className="fas fa-stream"></i><span>LIVE</span> </a>
         </div>
       </main>
     </div>
@@ -38,7 +38,7 @@ const Project = ({ project }) => {
 
 function Tool({ children }) {
   return (
-    <span className="bg-pink-500/80 px-2 py-0.5 inline-block rounded uppercase font-semibold text-xs md:text-sm">
+    <span className="bg-[#e34b71] px-2 py-0.5 inline-block rounded uppercase font-semibold text-xs md:text-sm">
       {children}
     </span>
   );

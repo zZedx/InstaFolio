@@ -12,7 +12,8 @@ import { recent } from "../../utils/recentProjecs";
 
 const MAX_VISIBILITY = 3;
 
-const Card = ({ title, content, imgs, tools , link }) => {
+const Card = ({ project }) => {
+  const { title, content, imgs, tools, link } = project;
   const { id } = useParams();
   useEffect(() => {
     setActive(false);
@@ -24,20 +25,30 @@ const Card = ({ title, content, imgs, tools , link }) => {
         active ? "cursor-pointer backdrop-blur-lg" : ""
       }`}
       style={{
-        boxShadow: active ? "0 0 40px hsl(327, 87%, 14%), 0 0 150px hsl(327, 87%, 14%)" : "none",
+        boxShadow: active
+          ? "0 0 40px hsl(327, 87%, 14%), 0 0 150px hsl(327, 87%, 14%)"
+          : "none",
         // backgroundImage: `url(${imgs[0]})`,
       }}
       onClick={() => setActive(false)}
     >
-      <img className={`p-1 rounded-xl absolute top-0 left-0 object-cover h-full ${active ? "blur" : ''}`} src={imgs[0]} alt="" />
+      <img
+        className={`p-1 rounded-xl absolute top-0 left-0 object-cover h-full ${
+          active ? "blur" : ""
+        }`}
+        src={imgs[0]}
+        alt=""
+      />
       <div
         className={`p-6 w-full transition-all duration-500 ease-in-out space-y-4 bg-black ${
           active ? "translate-y-0" : "2xl:translate-y-[78%] translate-y-[77%]"
         }`}
-        style={{
-          // background:
-          //   "linear-gradient(180deg, hsl(327, 32%, 1% , 0.3), hsl(327, 87%, 14%))",
-        }}
+        style={
+          {
+            // background:
+            //   "linear-gradient(180deg, hsl(327, 32%, 1% , 0.3), hsl(327, 87%, 14%))",
+          }
+        }
       >
         <div className="flex items-center justify-between mb-6 ">
           <h1
@@ -60,7 +71,8 @@ const Card = ({ title, content, imgs, tools , link }) => {
                 }}
                 className={`custom-btn btn2 text-sm py-2 px-4 rounded-sm flex gap-3 items-center transition-all`}
               >
-                <i className="fa-brands fa-github text-lg"></i> <span>CODE</span>
+                <i className="fa-brands fa-github text-lg"></i>{" "}
+                <span>CODE</span>
               </button>
             </a>
           ) : (
@@ -155,13 +167,7 @@ const Carousel = () => {
               display: Math.abs(active - i) > MAX_VISIBILITY ? "none" : "block",
             }}
           >
-            <Card
-              imgs={project.imgs}
-              title={project.name}
-              content={project.description}
-              tools={project.tools}
-              link = {project.link}
-            />
+            <Card project={project} />
           </div>
         ))}
         {active < count - 1 && (
