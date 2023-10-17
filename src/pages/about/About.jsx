@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./about.module.css";
 
 const mainSkills = [
@@ -295,10 +296,10 @@ const About = () => {
     <div className="min-h-full w-full 2xl:px-32 py-12 md:px28 sm:px-20 px-4 pt-0">
       <div className="2xl:px-16 lg:pt-24 lg:pb-16 2xl:pt-48 pb-8 pt-8  md:px-16 px-8 sm:px-12 w-full flex-col xl:flex-row flex items-center justify-center gap-8 xl:gap-16 border-[#e34b71] relative border-b ">
         <div className="absolute -left-[10px] bottom-56 xl:bottom-auto bg-black text-xl flex flex-col gap-4 py-4">
-          <a href="github">
+          <a href="https://github.com/zZedx">
             <i className="fa-brands fa-github text-[#e34b71] hover:text-pink-300 xl:text-3xl"></i>
           </a>
-          <a href="linkedin">
+          <a href="https://www.linkedin.com/in/kartik-ajmera-54919628a/">
             <i className="fa-brands fa-linkedin text-[#e34b71] hover:text-pink-300 xl:text-3xl"></i>
           </a>
         </div>
@@ -329,11 +330,11 @@ const About = () => {
             collaborate and turn your web project ideas into reality.
           </p>
           <div className="flex gap-4 mt-10">
-            <a href="github">
+            <Link to={"/contact"}>
               <button className="customBtn3 btn3 font-semibold tracking-wider">
                 CONTACT
               </button>
-            </a>
+            </Link>
             <a href="github">
               <button className="customBtn3 btn3 font-semibold tracking-wider">
                 RESUME

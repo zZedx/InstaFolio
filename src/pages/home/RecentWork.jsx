@@ -27,7 +27,7 @@ const RecentWork = () => {
       <h2 className="uppercase font-semibold tracking-wider text-center pb-1 mb-3 border-b-white/40">
         Recent Work
       </h2>
-      <ul className="flex gap-6 overflow-scroll lg:px-8 lg:justify-center">
+      <ul className="flex gap-4 lg:gap-6 overflow-scroll lg:px-8 lg:justify-center">
         {recent.map((item, i) => (
           <li key={i} onClick={() => delayNavigation(`/story/${i}`)}>
             <RecentStoryItem project={item} />
