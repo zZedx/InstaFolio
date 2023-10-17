@@ -7,7 +7,12 @@
     min-height: 20rem;
     /* order: 1; */
 }
-
+@media (max-width: 768px) {
+    .animation {
+        min-width: 13rem;
+        min-height: 15rem;
+    }
+}
 @keyframes image__animate {
     0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
