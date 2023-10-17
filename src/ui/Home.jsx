@@ -1,4 +1,4 @@
-import RecentWork from "../pages/home/recentWork";
+import RecentWork from "../pages/home/RecentWork";
 import FvrtProjects from "../pages/home/FvrtProjects";
 import HomeSideBar from "../pages/home/HomeSideBar";
 
