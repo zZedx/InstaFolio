@@ -59,7 +59,7 @@ const Carousel = () => {
               setActive(Number(id) - 1);
             }}
           >
-            <i className="fa-solid fa-chevron-left"></i>
+            <i className="fa-solid fa-chevron-left text-yellow-900"></i>
           </button>
         )}
         {recent.map((project, i) => (
@@ -93,7 +93,7 @@ const Carousel = () => {
               setActive(Number(id) + 1);
             }}
           >
-            <i className="fa-solid fa-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right text-yellow-900"></i>
           </button>
         )}
       </div>

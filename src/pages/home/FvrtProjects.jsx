@@ -7,7 +7,7 @@ const projects = [
     description:
       "I created 'DomiHut Pizza,' a web-based pizza ordering system developed with React, React Router, Redux Toolkit, and Tailwind CSS. This project demonstrates my proficiency in using cutting-edge web development technologies to build a dynamic and user-friendly application. Users can easily navigate the menu, add items to their cart, and place orders. The use of React and React Router ensures a responsive and seamless user experience, while Redux Toolkit manages the state efficiently. 'DomiHut Pizza' boasts a modern and visually appealing design, thanks to Tailwind CSS. This project is a testament to my skills as a web developer and a valuable addition to my resume and portfolio, showcasing my ability to create practical and engaging web applications.",
     tools: ["React", "Redux", "TailwindCss"],
-    date: "9 Oct 2003",
+    date: "9 Oct 2023",
     code: "https://github.com/zZedx/DomiHut",
     live: "https://domihut-jgpvuyyqd-zzedx.vercel.app/menu",
   },
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     name: "Spotify Clone",
-    img: "images/spotify.png",
+    img: "https://res.cloudinary.com/dbm00ix5k/image/upload/v1697533675/InstaFolio/spotify.png",
     description:
       " A music player project inspired by Spotify's user interface, created using HTML, CSS, and JavaScript. The project's main objective was to design a responsive and user-friendly music player, incorporating essential functions like play, pause, skip, and volume control.",
     tools: ["Html", "Css", "JavaScript"],

@@ -22,7 +22,7 @@ export const Card = ({ title, content, imgs, tools, link }) => {
       onClick={() => setActive(false)}
     >
       <img
-        className={`p-1 rounded-xl absolute top-0 left-0 object-cover w-full h-full ${
+        className={`p-1 rounded-xl absolute top-0 left-0 object-cover object-top w-full h-full ${
           active ? "blur" : ""
         }`}
         src={imgs[0]}
@@ -41,7 +41,7 @@ export const Card = ({ title, content, imgs, tools, link }) => {
       >
         <div className="flex items-center justify-between mb-6 ">
           <h1
-            className={`z-10 font-bold text-xl 2xl:text-2xl relative tracking-wider text-transparent uppercase after:h-1 after:w-[140%] after:bg-gradient-to-r after:from-pink-500 after:to-pink-50 after:absolute after:bottom-[-5px] after:left-0 after:origin-left after:transition-all after:duration-500 ${
+            className={`z-10 font-bold text-xl 2xl:text-2xl relative tracking-wider text-transparent after:h-1 after:w-[140%] after:bg-gradient-to-r after:from-pink-500 after:to-pink-50 after:absolute after:bottom-[-5px] after:left-0 after:origin-left after:transition-all after:duration-500 ${
               active ? "after:scale-100" : "after:scale-0"
             }`}
             style={{
