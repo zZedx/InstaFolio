@@ -9,7 +9,7 @@ const projects = [
     tools: ["React", "Redux", "TailwindCss"],
     date: "9 Oct 2023",
     code: "https://github.com/zZedx/DomiHut",
-    live: "https://domihut-jgpvuyyqd-zzedx.vercel.app/menu",
+    live: "https://domihut-jgpvuyyqd-zzedx.vercel.app",
   },
 
   {
