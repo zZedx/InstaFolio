@@ -48,6 +48,8 @@ const Carousel = () => {
         InstaFolio
       </Link>
 
+      <span className="absolute bottom-10 uppercase font-bold sm:hidden">Swipe <i className="fa-solid fa-arrow-right"></i></span>
+
       <div className="carousel h-3/4 lg:h-5/6 xl:w-1/4" {...handlers}>
         {active > 0 && (
           <button
