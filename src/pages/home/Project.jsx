@@ -31,7 +31,7 @@ const Project = ({ project }) => {
         <a className="border space-x-3 border-white/40 px-2 py-1 text-sm inline-block w-24 text-center font-semibold tracking-widest" href={code}><i className="fa-brands fa-github"></i><span>CODE</span> </a>
         <a className="border space-x-3 border-white/40 px-2 py-1 text-sm inline-block w-24 text-center font-semibold tracking-widest" href={live}><i className="fas fa-stream"></i><span>LIVE</span> </a>
         </div>
-        <span className="text-red-500 text-sm px-4 mt-2">Live might take time to load because of free hosting</span>
+        <p className="text-red-500 text-sm px-4 mt-2 flex-wrap">Live might take time to load because of free hosting</p>
       </main>
     </div>
   );
