@@ -7,7 +7,7 @@ const HomeSideBar = () => {
         to={"/about"}
         className="flex gap-4 items-center hover:bg-white/10 py-3 rounded-md -ml-3 -mr-3 px-3"
       >
-        <img src="images/pfp.jpg" className="bg-red-50 w-14 h-14 rounded-full object-cover object-top" alt="" />
+        <img src="/images/pfp.jpg" className="bg-red-50 w-14 h-14 rounded-full object-cover object-top" alt="" />
         <div>
           <h1 className="font-semibold tracking-wider text-purple-50">Kartik Ajmera</h1>
           <span className="text-sm 2xl:text-base ">Full Stack Developer</span>
