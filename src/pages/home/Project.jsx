@@ -1,4 +1,4 @@
-import TextExpander from "../../utils/textExpander";
+import TextExpander from "../../utils/TextExpander";
 
 const Project = ({ project }) => {
   const { name, date, img, tools, description , code , live} = project;
