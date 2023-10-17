@@ -84,7 +84,7 @@ export const Card = ({ title, content, imgs, tools, link }) => {
             </li>
           ))}
         </ul>
-        <p className="border-t-2 pt-3 h-48">{content}</p>
+        <p className="border-t-2 pt-3 h-48 text-sm xl:text-base">{content}</p>
       </div>
     </div>
   );
