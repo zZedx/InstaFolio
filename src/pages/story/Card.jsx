@@ -22,7 +22,7 @@ export const Card = ({ title, content, imgs, tools, link }) => {
       onClick={() => setActive(false)}
     >
       <img
-        className={`p-1 rounded-xl absolute top-0 left-0 object-cover h-full ${
+        className={`p-1 rounded-xl absolute top-0 left-0 object-cover w-full h-full ${
           active ? "blur" : ""
         }`}
         src={imgs[0]}
