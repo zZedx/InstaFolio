@@ -329,13 +329,13 @@ const About = () => {
             about web development, I'm always eager to connect. Let's
             collaborate and turn your web project ideas into reality.
           </p>
-          <div className="flex gap-4 mt-10">
+          <div className="flex gap-4 lg:gap-8 mt-10">
             <Link to={"/contact"}>
               <button className="customBtn3 btn3 font-semibold tracking-wider">
                 CONTACT
               </button>
             </Link>
-            <a href="github">
+            <a href="./resume.pdf">
               <button className="customBtn3 btn3 font-semibold tracking-wider">
                 RESUME
               </button>
