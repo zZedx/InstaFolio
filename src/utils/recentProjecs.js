@@ -1,5 +1,12 @@
 export const recent = [
   {
+    name: "anchors.in",
+    imgs: ["https://res.cloudinary.com/dbm00ix5k/image/upload/v1698040695/InstaFolio/Screenshot_2023-10-23_112714_qv5r9p.png"],
+    description: "Made this project for anchors.in where user can submit any youtube video link and get details about it and its channel.",
+    tools: ["React", "Tailwind"],
+    link: "https://github.com/zZedx/anchors",
+  },
+  {
     name: "InstaFolio",
     imgs: [
       "https://res.cloudinary.com/dbm00ix5k/image/upload/v1697533367/InstaFolio/instafoliomobile_dmmrdb.png",
@@ -41,13 +48,7 @@ export const recent = [
     tools: ["Node.js", "JavaScript", "Bootstrap"],
     link: "https://github.com/zZedx/Yelp",
   },
-  // {
-  //   name: "Spotify",
-  //   imgs: ["../images/spotify.png"],
-  //   description: "",
-  //   tools: ["css", "js"],
-  //   link: "",
-  // },
+  
   // {
   //   name: "Spotify",
   //   imgs: ["../images/spotify.png"],
