@@ -1,11 +1,22 @@
 import { useState } from "react";
+import { useRef } from "react";
+import toast from "react-hot-toast";
+// import 'dotenv/config'
+
 import "./contact.css";
+import emailjs from '@emailjs/browser';
+
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 
 const Contact = () => {
+  const form = useRef();
+
   const [isFocused, setIsFocused] = useState(false);
   const [isFocused2, setIsFocused2] = useState(false);
   const [isFocused3, setIsFocused3] = useState(false);
   const [isFocused4, setIsFocused4] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -43,17 +54,31 @@ const Contact = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setIsSubmitting(true);
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, "aJQttG4CBb1GiKyn_")
+      .then(() => {
+        toast.success('Email Sent!');
+      }, (error) => {
+        toast.error('Could not send email');
+          console.log(error.text);
+      });
+    setIsSubmitting(false);
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
   }
 
   return (
     <div className="w-full h-3/4 flex justify-center items-center px-3 flex-col gap-14">
-      <h1 className="font-head3 text-3xl lg:text-5xl text-[#e34b71] uppercase">
-        Get in touch 👋
+      <h1 className="font-head3 font-bold tracking-wider text-3xl lg:text-5xl text-[#e34b71] uppercase">
+        Contact 👋
       </h1>
       <form
         action=""
         className="flex flex-col w-full sm:w-2/4 xl:w-2/5"
         onSubmit={handleSubmit}
+        ref={form}
       >
         <div className="relative flex nameInput ">
           <input
@@ -160,7 +185,7 @@ const Contact = () => {
           </label>
         </div>
 
-        <button className="bg-[#a52646] px-6 py-2 uppercase font-semibold border-2 transition-all border-pink-700 hover:bg-transparent w-36 self-end mx-2 mt-8 rounded-full text-pink-100">
+        <button className="bg-[#a52646] px-6 py-2 uppercase font-semibold border-2 transition-all border-pink-700 hover:bg-transparent w-36 self-end mx-2 mt-8 rounded-full text-pink-100" disabled={isSubmitting}>
           Submit
         </button>
       </form>

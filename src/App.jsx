@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
+import { Toaster } from 'react-hot-toast';
 
 import AppLayout from "./ui/AppLayout";
 import Home from "./ui/Home";
@@ -37,7 +38,10 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router}></RouterProvider>;
+  return <>
+  <RouterProvider router={router}></RouterProvider>;
+  <Toaster position="top-center"/>
+  </>
 };
 
 export default App;
