@@ -15,11 +15,11 @@ const HomeSideBar = () => {
           className="bg-red-50 w-14 h-14 rounded-full object-cover object-top"
           alt=""
         />
-        <div>
+        <div className="flex flex-col">
           <h1 className="font-semibold tracking-wider text-purple-50">
             Kartik Ajmera
           </h1>
-          <span className="text-sm 2xl:text-base ">Full Stack Developer</span>
+          <span className="text-sm 2xl:text-sm text-pink-100/70">Full Stack Developer</span>
         </div>
       </Link>
       <div className="flex justify-between">
