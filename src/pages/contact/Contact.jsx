@@ -71,7 +71,7 @@ const Contact = () => {
 
   return (
     <div className="w-full h-3/4 mt-12 flex justify-center items-center px-3 flex-col gap-14">
-      <h1 className="font-head3 font-semibold tracking-wider text-3xl lg:text-5xl text-[#e34b71] uppercase">
+      <h1 className="font-head3 font-bold tracking-wider text-3xl lg:text-5xl text-[#e34b71] uppercase">
         Contact 👋
       </h1>
       <form
