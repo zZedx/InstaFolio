@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 // import 'dotenv/config'
 
 import "./contact.css";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
@@ -55,13 +55,17 @@ const Contact = () => {
   function handleSubmit(e) {
     e.preventDefault();
     setIsSubmitting(true);
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, "aJQttG4CBb1GiKyn_")
-      .then(() => {
-        toast.success('Email Sent!');
-      }, (error) => {
-        toast.error('Could not send email');
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, "aJQttG4CBb1GiKyn_")
+      .then(
+        () => {
+          toast.success("Email Sent!");
+        },
+        (error) => {
+          toast.error("Could not send email");
           console.log(error.text);
-      });
+        },
+      );
     setIsSubmitting(false);
     setName("");
     setEmail("");
@@ -70,17 +74,17 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full h-3/4 mt-12 flex justify-center items-center px-3 flex-col gap-14">
-      <h1 className="font-head3 font-bold tracking-wider text-3xl lg:text-5xl text-[#e34b71] uppercase">
+    <div className="mt-12 flex h-3/4 w-full flex-col items-center justify-center gap-14 px-3">
+      <h1 className="font-head3 text-3xl font-bold uppercase tracking-wider text-[#e34b71] lg:text-5xl">
         Contact 👋
       </h1>
       <form
         action=""
-        className="flex flex-col w-full sm:w-2/4 xl:w-2/5"
+        className="flex w-full flex-col sm:w-2/4 xl:w-2/5"
         onSubmit={handleSubmit}
         ref={form}
       >
-        <div className="relative flex nameInput ">
+        <div className="nameInput relative flex ">
           <input
             type="text"
             name="name"
@@ -90,17 +94,17 @@ const Contact = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             // placeholder="Name"
-            className="border focus:border-[#e34b71] focus:border-2 rounded-md p-2 m-2 outline-none w-full bg-transparent "
+            className="m-2 w-full rounded-md border bg-transparent p-2 outline-none focus:border-2 focus:border-[#e34b71] "
           />
           <label
             htmlFor="name"
             className={`${
               !isFocused
                 ? !name
-                  ? "top-4 left-2 bg-transparent"
+                  ? "left-2 top-4 bg-transparent"
                   : "-top-0.5 left-6 text-sm"
                 : "-top-0.5 left-6 text-sm"
-            } absolute bg-black px-3 messageLabel transition-all text-pink-100/70`}
+            } messageLabel absolute bg-black px-3 text-pink-100/70 transition-all`}
           >
             Name
           </label>
@@ -116,17 +120,17 @@ const Contact = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             // placeholder="Email"
-            className="border focus:border-[#e34b71] focus:border-2 rounded-md p-2 m-2 outline-none  w-full bg-transparent emailInput"
+            className="emailInput m-2 w-full rounded-md border bg-transparent p-2  outline-none focus:border-2 focus:border-[#e34b71]"
           />
           <label
             htmlFor="email"
             className={`${
               !isFocused2
                 ? !email
-                  ? "top-4 left-2 bg-transparent"
+                  ? "left-2 top-4 bg-transparent"
                   : "-top-0.5 left-6 text-sm"
                 : "-top-0.5 left-6 text-sm"
-            } absolute bg-black px-3 messageLabel transition-all text-pink-100/70`}
+            } messageLabel absolute bg-black px-3 text-pink-100/70 transition-all`}
           >
             Email
           </label>
@@ -142,17 +146,17 @@ const Contact = () => {
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             // placeholder="Subject"
-            className="border focus:border-[#e34b71] focus:border-2 rounded-md p-2 m-2 outline-none   w-full bg-transparent subjectInput"
+            className="subjectInput m-2 w-full rounded-md border bg-transparent p-2   outline-none focus:border-2 focus:border-[#e34b71]"
           />
           <label
             htmlFor="subject"
             className={`${
               !isFocused3
                 ? !subject
-                  ? "top-4 left-2 bg-transparent"
+                  ? "left-2 top-4 bg-transparent"
                   : "-top-0.5 left-6 text-sm"
                 : "-top-0.5 left-6 text-sm"
-            } absolute bg-black px-3 messageLabel transition-all text-pink-100/70`}
+            } messageLabel absolute bg-black px-3 text-pink-100/70 transition-all`}
           >
             Subject
           </label>
@@ -169,23 +173,26 @@ const Contact = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             // placeholder="Message"
-            className="border focus:border-[#e34b71] focus:border-2 rounded-md p-2 m-2 outline-none w-full bg-transparent messageInput"
+            className="messageInput m-2 w-full rounded-md border bg-transparent p-2 outline-none focus:border-2 focus:border-[#e34b71]"
           ></textarea>
           <label
             htmlFor="message"
             className={`${
               !isFocused4
                 ? !message
-                  ? "top-4 left-2 bg-transparent"
+                  ? "left-2 top-4 bg-transparent"
                   : "-top-0.5 left-6 text-sm"
                 : "-top-0.5 left-6 text-sm"
-            } absolute bg-black px-3 messageLabel transition-all text-pink-100/70`}
+            } messageLabel absolute bg-black px-3 text-pink-100/70 transition-all`}
           >
             Message
           </label>
         </div>
 
-        <button className="bg-[#a52646] px-6 py-2 uppercase font-semibold border-2 transition-all border-pink-700 hover:bg-transparent w-36 self-end mx-2 mt-8 rounded-full text-pink-100" disabled={isSubmitting}>
+        <button
+          className="mx-2 mt-8 w-36 self-end rounded-full border-2 border-pink-700 bg-[#a52646] px-6 py-2 font-semibold uppercase text-pink-100 transition-all hover:bg-transparent"
+          disabled={isSubmitting}
+        >
           Submit
         </button>
       </form>

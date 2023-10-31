@@ -36,19 +36,21 @@ const Carousel = () => {
   });
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center overflow-hidden bg-[#24231f] select-none">
+    <div className="flex h-screen w-screen select-none items-center justify-center overflow-hidden bg-[#24231f]">
       <Link to={"/"}>
-        <i className="fa-solid fa-xmark absolute top-8 right-8 lg:top-10 lg:right-16 text-3xl hover:text-pink-500"></i>
+        <i className="fa-solid fa-xmark absolute right-8 top-8 text-3xl hover:text-pink-500 lg:right-16 lg:top-10"></i>
       </Link>
 
       <Link
         to={"/"}
-        className="absolute top-8 left-8 lg:top-10 lg:left-16 text-3xl hover:text-pink-500 font-title"
+        className="absolute left-8 top-8 font-title text-3xl hover:text-pink-500 lg:left-16 lg:top-10"
       >
         InstaFolio
       </Link>
 
-      <span className="absolute bottom-3 uppercase font-bold sm:hidden">Swipe <i className="fa-solid fa-arrow-right"></i></span>
+      <span className="absolute bottom-3 font-bold uppercase sm:hidden">
+        Swipe <i className="fa-solid fa-arrow-right"></i>
+      </span>
 
       <div className="carousel h-3/4 lg:h-5/6 xl:w-1/4" {...handlers}>
         {active > 0 && (
@@ -100,5 +102,3 @@ const Carousel = () => {
     </div>
   );
 };
-
-

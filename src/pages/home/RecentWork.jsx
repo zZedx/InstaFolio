@@ -8,10 +8,10 @@ import Loader from "../../ui/Loader";
 const RecentWork = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const [show , setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
   const delayNavigation = (path) => {
-    setShow(true)
+    setShow(true);
     setLoading(true); // Show loading indicator
     setTimeout(() => {
       setTimeout(() => {
@@ -22,12 +22,12 @@ const RecentWork = () => {
   };
 
   return (
-    <div className="lg:mb-12 lg:mt-6 mb-6">
+    <div className="mb-6 lg:mb-12 lg:mt-6">
       <Loader isLoading={loading} show={show}></Loader>
-      <h2 className="uppercase font-semibold tracking-wider text-center pb-1 mb-3 border-b-white/40">
+      <h2 className="mb-3 border-b-white/40 pb-1 text-center font-semibold uppercase tracking-wider">
         Recent Work
       </h2>
-      <ul className="flex gap-4 lg:gap-6 overflow-scroll lg:px-8 lg:justify-center">
+      <ul className="flex gap-4 overflow-scroll lg:justify-center lg:gap-6 lg:px-8">
         {recent.map((item, i) => (
           <li key={i} onClick={() => delayNavigation(`/story/${i}`)}>
             <RecentStoryItem project={item} />

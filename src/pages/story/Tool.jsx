@@ -1,6 +1,6 @@
 export function Tool({ children }) {
   return (
-    <span className="bg-gradient-to-tr to-[#E4F9F5] border-2 border-red-800 from-[rgb(236, 72, 153)] px-2 py-0.5 inline-block rounded uppercase font-bold text-xs md:text-sm text-center text-white">
+    <span className="from-[rgb(236, 72, 153)] inline-block rounded border-2 border-red-800 bg-gradient-to-tr to-[#E4F9F5] px-2 py-0.5 text-center text-xs font-bold uppercase text-white md:text-sm">
       {children}
     </span>
   );

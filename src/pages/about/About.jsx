@@ -293,9 +293,9 @@ const tools = [
 
 const About = () => {
   return (
-    <div className="min-h-full w-full 2xl:px-32 py-12 md:px28 sm:px-20 px-4 pt-0">
-      <div className="2xl:px-16 lg:pt-24 lg:pb-16 2xl:pt-24 pb-8 pt-8  md:px-16 px-8 sm:px-12 w-full flex-col xl:flex-row flex items-center justify-center gap-8 xl:gap-16 border-[#e34b71] relative border-b ">
-        <div className="absolute -left-[10px] bottom-56 xl:bottom-auto bg-black text-xl flex flex-col gap-4 py-4">
+    <div className="md:px28 min-h-full w-full px-4 py-12 pt-0 sm:px-20 2xl:px-32">
+      <div className="relative flex w-full flex-col items-center justify-center  gap-8 border-b border-[#e34b71] px-8 pb-8 pt-8 sm:px-12 md:px-16 lg:pb-16 lg:pt-24 xl:flex-row xl:gap-16 2xl:px-16 2xl:pt-24 ">
+        <div className="absolute -left-[10px] bottom-56 flex flex-col gap-4 bg-black py-4 text-xl xl:bottom-auto">
           <a href="https://github.com/zZedx">
             <i className="fa-brands fa-github text-[#e34b71] hover:text-pink-300 xl:text-3xl"></i>
           </a>
@@ -307,15 +307,15 @@ const About = () => {
         <div className={`${styles.animation} bg-cover bg-top`}></div>
 
         <div>
-          <span className="font-semibold text-lg lg:text-xl ">Hi , I am</span>
-          <h1 className="flex items-center font-bold gap-2 text-4xl xl:text-6xl tracking-widest font-head3 text-[#e34b71]">
+          <span className="text-lg font-semibold lg:text-xl ">Hi , I am</span>
+          <h1 className="flex items-center gap-2 font-head3 text-4xl font-bold tracking-widest text-[#e34b71] xl:text-6xl">
             Kartik {/*<span className="text-2xl">🖐️</span>*/}
           </h1>
-          <div className="flex gap-2 items-center mt-1">
-            <div className="w-28 lg:w-40 h-0.5 bg-red-100"></div>
+          <div className="mt-1 flex items-center gap-2">
+            <div className="h-0.5 w-28 bg-red-100 lg:w-40"></div>
             <span className="text-right text-lg">Web Developer</span>
           </div>
-          <p className="mt-4 text-sm md:text-base xl:text-lg 2xl:text-lg text-pink-100">
+          <p className="mt-4 text-sm text-pink-100 md:text-base xl:text-lg 2xl:text-lg">
             An aspiring full-stack web developer from India. My journey into the
             world of web development began with a simple curiosity that quickly
             transformed into a deep passion. I was captivated when I saw my
@@ -329,7 +329,7 @@ const About = () => {
             about web development, I'm always eager to connect. Let's
             collaborate and turn your web project ideas into reality.
           </p>
-          <div className="flex gap-4 lg:gap-8 mt-10">
+          <div className="mt-10 flex gap-4 lg:gap-8">
             <Link to={"/contact"}>
               <button className="customBtn3 btn3 font-semibold tracking-wider">
                 CONTACT
@@ -350,13 +350,13 @@ const About = () => {
 
 function Skills() {
   return (
-    <div className="2xl:px-16 md:px-16 px-8 sm:px-12 w-full mt-6 md:mt-12 xl:mt-20  py-16 flex flex-col gap-16">
-      <div className="font-bold items-center justify-center flex flex-col md:flex-row md:gap-4 text-4xl xl:text-6xl">
-        <span className="text-[#e34b71] tracking-wider font-head3">SKILLS</span>{" "}
+    <div className="mt-6 flex w-full flex-col gap-16 px-8 py-16 sm:px-12  md:mt-12 md:px-16 xl:mt-20 2xl:px-16">
+      <div className="flex flex-col items-center justify-center text-4xl font-bold md:flex-row md:gap-4 xl:text-6xl">
+        <span className="font-head3 tracking-wider text-[#e34b71]">SKILLS</span>{" "}
         <span className="text-xl font-normal text-pink-200">and</span>{" "}
-        <span className="text-[#e34b71] tracking-wider font-head3">TOOLS</span>
+        <span className="font-head3 tracking-wider text-[#e34b71]">TOOLS</span>
       </div>
-      <ul className="flex gap-8 flex-wrap justify-center items-center w-full">
+      <ul className="flex w-full flex-wrap items-center justify-center gap-8">
         {mainSkills.map((skill, i) => (
           <Skill
             key={skill.name}
@@ -366,7 +366,7 @@ function Skills() {
           />
         ))}
       </ul>
-      <ul className="flex gap-8 flex-wrap justify-center items-center w-full">
+      <ul className="flex w-full flex-wrap items-center justify-center gap-8">
         {stack.map((skill, i) => (
           <Skill
             key={skill.name}
@@ -376,7 +376,7 @@ function Skills() {
           />
         ))}
       </ul>
-      <ul className="flex gap-8 flex-wrap justify-center items-center w-full">
+      <ul className="flex w-full flex-wrap items-center justify-center gap-8">
         {tools.map((skill, i) => (
           <Skill
             key={skill.name}

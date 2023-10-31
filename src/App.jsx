@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 
 import AppLayout from "./ui/AppLayout";
 import Home from "./ui/Home";
-import About from "./pages/about/About"
-import Experience from "./pages/experience/Experience"
-import Contact from "./pages/contact/Contact"
+import About from "./pages/about/About";
+import Experience from "./pages/experience/Experience";
+import Contact from "./pages/contact/Contact";
 import Story from "./pages/story/Story";
 
 const router = createBrowserRouter([
@@ -32,16 +32,18 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path : '/story/:id',
-    element : <Story/>
-  }
+    path: "/story/:id",
+    element: <Story />,
+  },
 ]);
 
 const App = () => {
-  return <>
-  <RouterProvider router={router}></RouterProvider>;
-  <Toaster position="top-center"/>
-  </>
+  return (
+    <>
+      <RouterProvider router={router}></RouterProvider>;
+      <Toaster position="top-center" />
+    </>
+  );
 };
 
 export default App;

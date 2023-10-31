@@ -5,35 +5,33 @@ export default function TextExpander({
   colapsedNumWords = 20,
   expandButtonText = "Show more",
   collapseButtonText = "Show less",
-  buttonColor="#ff6622",
+  buttonColor = "#ff6622",
   expanded = false,
-  className = '',
+  className = "",
   buttonInline = true,
-  title
+  title,
 }) {
   const [isExpanded, setIsExpanded] = useState(expanded);
 
   const boxStyle = {
-        padding: "10px",
-        border: "1px solid #ccc",
-        borderRadius: '7px',
-        backgroundColor: '#f7f7f7'
-  }
+    padding: "10px",
+    border: "1px solid #ccc",
+    borderRadius: "7px",
+    backgroundColor: "#f7f7f7",
+  };
   const buttonStyle = {
     color: buttonColor,
-    cursor: "pointer"
+    cursor: "pointer",
   };
 
   const expandedText = children;
-  const slicedText = children
-    .split(" ")
-    .slice(0, colapsedNumWords)
-    .join(" ");
+  const slicedText = children.split(" ").slice(0, colapsedNumWords).join(" ");
 
   return (
-    <div style={className === 'box' ? boxStyle : null} className={className}>
-      <p style={{display : `${buttonInline ? 'inline' : ''}` , margin:0}}>
-        <span className="font-bold underline mr-2">{title}</span> {isExpanded ? expandedText : `${slicedText}... `}
+    <div style={className === "box" ? boxStyle : null} className={className}>
+      <p style={{ display: `${buttonInline ? "inline" : ""}`, margin: 0 }}>
+        <span className="mr-2 font-bold underline">{title}</span>{" "}
+        {isExpanded ? expandedText : `${slicedText}... `}
       </p>
       <span style={buttonStyle} onClick={() => setIsExpanded((e) => !e)}>
         {isExpanded ? collapseButtonText : expandButtonText}

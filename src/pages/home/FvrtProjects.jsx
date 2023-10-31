@@ -47,10 +47,10 @@ const projects = [
 function FvrtProjects() {
   return (
     <div>
-      <h1 className="uppercase font-semibold tracking-wider text-center pb-1 mb-3 border-b-white/40">
+      <h1 className="mb-3 border-b-white/40 pb-1 text-center font-semibold uppercase tracking-wider">
         Favorite Projects
       </h1>
-      <ul className="space-y-8 xxl:px-16 mt-4 lg:mt-6 flex flex-col items-center w-full">
+      <ul className="xxl:px-16 mt-4 flex w-full flex-col items-center space-y-8 lg:mt-6">
         {projects.map((item, i) => (
           <li className="w-full xl:w-3/4" key={i}>
             <Project project={item} />

@@ -2,40 +2,48 @@ import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="flex justify-between lg:justify-normal lg:flex-col lg:h-screen py-8 px-6">
+    <div className="flex justify-between px-6 py-8 lg:h-screen lg:flex-col lg:justify-normal">
       <div className="hidden md:block lg:mb-8">
-        <Link to={"/"} className="font-bold font-title text-3xl px-4">
+        <Link to={"/"} className="px-4 font-title text-3xl font-bold">
           InstaFolio
         </Link>
       </div>
-      <div className="flex justify-between w-full md:w-auto lg:flex-col gap-2">
+      <div className="flex w-full justify-between gap-2 md:w-auto lg:flex-col">
         <NavLink
           to={"/"}
-          className="flex gap-2 lg:gap-4 hover:bg-white/10 px-4 lg:py-3 rounded-lg items-center"
+          className="flex items-center gap-2 rounded-lg px-4 hover:bg-white/10 lg:gap-4 lg:py-3"
         >
           <i className="fa-solid fa-house text-xl"></i>
-          <span className="hidden sm:block tracking-widest font-medium ">HOME</span>
+          <span className="hidden font-medium tracking-widest sm:block ">
+            HOME
+          </span>
         </NavLink>
         <p
           // to={""}
-          className="flex gap-2 lg:gap-4 hover:bg-white/10 px-4 lg:py-3 rounded-lg items-center text-white/40 cursor-not-allowed"
+          className="flex cursor-not-allowed items-center gap-2 rounded-lg px-4 text-white/40 hover:bg-white/10 lg:gap-4 lg:py-3"
         >
           <i className="fas fa-history text-xl"></i>
-          <span className="hidden sm:block tracking-widest font-medium">EXPERIENCE</span>
+          <span className="hidden font-medium tracking-widest sm:block">
+            EXPERIENCE
+          </span>
         </p>
         <NavLink
           to={"/contact"}
-          className="flex gap-2 lg:gap-4 hover:bg-white/10 px-4 lg:py-3 rounded-lg items-center"
+          className="flex items-center gap-2 rounded-lg px-4 hover:bg-white/10 lg:gap-4 lg:py-3"
         >
           <i className="fa-brands fa-facebook-messenger text-xl"></i>
-          <span className="hidden sm:block tracking-widest font-medium">CONTACT</span>
+          <span className="hidden font-medium tracking-widest sm:block">
+            CONTACT
+          </span>
         </NavLink>
         <NavLink
           to={"/about"}
-          className="flex gap-2 lg:gap-4 hover:bg-white/10 px-4 lg:py-3 rounded-lg items-center"
+          className="flex items-center gap-2 rounded-lg px-4 hover:bg-white/10 lg:gap-4 lg:py-3"
         >
           <i className="fa-solid fa-user text-xl"></i>
-          <span className="hidden sm:block tracking-widest font-medium">ABOUT</span>
+          <span className="hidden font-medium tracking-widest sm:block">
+            ABOUT
+          </span>
         </NavLink>
       </div>
     </div>
