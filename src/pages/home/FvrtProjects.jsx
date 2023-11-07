@@ -2,6 +2,16 @@ import Project from "./Project";
 
 const projects = [
   {
+    name: "The Lodge Lyfe",
+    img: "https://res.cloudinary.com/dbm00ix5k/image/upload/v1699350912/InstaFolio/Screenshot_2023-11-07_152346_su6lu7.png",
+    description:
+      "A booking website dashboard made using the MERN (MongoDB, Express.js, React, Node.js) stack. Leveraged JWT token for secure user authentication, React Query for remote state management, and Styled Components for non-responsive styling. This platform enables admins to efficiently manage bookings, users, and cabins, enhancing the booking process for a seamless user experience.",
+    tools: ["MERN Stack", "React query", "Styled Components"],
+    date: "11 Nov 2023",
+    code: "https://github.com/zZedx/The-Lodge-Lyfe---Frontend",
+    live: "https://the-lodge-lyfe.vercel.app",
+  },
+  {
     name: "DomiHut Pizza",
     img: "https://res.cloudinary.com/dbm00ix5k/image/upload/v1697533367/InstaFolio/Domihut_arfo1n.png",
     description:
