@@ -8,7 +8,7 @@ const projects = [
     tools : ["MERN Stack", "React query", "Tailwind CSS"],
     date : "22 Nov 2023",
     code : "https://github.com/zZedx/twitterClone-frontend",
-    live : "twitterclone-zed.vercel.app/home"
+    live : "https://twitterclone-zed.vercel.app/home"
   },
   {
     name: "The Lodge Lyfe",
