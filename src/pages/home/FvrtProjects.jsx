@@ -2,6 +2,15 @@ import Project from "./Project";
 
 const projects = [
   {
+    name : "Twitter Clone",
+    img : "https://res.cloudinary.com/dbm00ix5k/image/upload/v1700636647/InstaFolio/Screenshot_2023-11-22_123220_rtct29.png",
+    description : "A full-stack social media app using the MERN stack, showcasing my expertise in full-stack web development. This project incorporates robust user authentication, allowing seamless sign-in and sign-up processes. Users can create dynamic posts, engage in social interactions through likes and comments, personalize their profiles, and engage in private conversations via direct messaging. The technology stack includes MongoDB for efficient data storage, Express.js for server-side scripting, React for a dynamic user interface, and Node.js for handling HTTP requests. This project not only highlights my proficiency in fundamental web development technologies but also reflects my commitment to creating user-centric and feature-rich applications.",
+    tools : ["MERN Stack", "React query", "Tailwind CSS"],
+    date : "22 Nov 2023",
+    code : "https://github.com/zZedx/twitterClone-frontend",
+    live : "twitterclone-zed.vercel.app/home"
+  },
+  {
     name: "The Lodge Lyfe",
     img: "https://res.cloudinary.com/dbm00ix5k/image/upload/v1699350912/InstaFolio/Screenshot_2023-11-07_152346_su6lu7.png",
     description:
@@ -57,10 +66,10 @@ const projects = [
 function FvrtProjects() {
   return (
     <div>
-      <h1 className="mb-3 border-b-white/40 pb-1 text-center font-semibold uppercase tracking-wider">
+      <h1 className="pb-1 mb-3 font-semibold tracking-wider text-center uppercase border-b-white/40">
         Favorite Projects
       </h1>
-      <ul className="xxl:px-16 mt-4 flex w-full flex-col items-center space-y-8 lg:mt-6">
+      <ul className="flex flex-col items-center w-full mt-4 space-y-8 xxl:px-16 lg:mt-6">
         {projects.map((item, i) => (
           <li className="w-full xl:w-3/4" key={i}>
             <Project project={item} />
