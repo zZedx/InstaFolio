@@ -6,7 +6,7 @@ Welcome to my portfolio website repository! This repository contains the source 
 
 This website serves as a showcase of my skills, projects, and achievements as a web developer. It provides visitors with information about me, my work, and ways to contact me.
 
-You can visit the live website here: https://insta-folio-omega.vercel.app/
+You can visit the live website here: https://instafolio.vercel.app/
 
 ## Technologies Used
 
